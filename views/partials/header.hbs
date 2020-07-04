@@ -1,0 +1,28 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/teams">
+        <img src="/img/football.svg" width="40" height="40" class="d-inline-block align-top" alt="football-logo" loading="lazy">
+        <!---
+          {{!-- Icon made by https://www.flaticon.com/authors/popcorns-arts Icon Pond from https://www.flaticon.com/ --}}
+        -->
+        <span class="logo-heading">Football Teams</span>  
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item {{#if active.teams}}active{{/if}}">
+            <a class="nav-link" href="/teams">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link add-team-link {{#if active.addTeam}}active{{/if}}" href="/teams/new-team">Add Team</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    </nav>
+</header>

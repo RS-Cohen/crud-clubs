@@ -1,0 +1,28 @@
+{
+  "name": "football-teams-api",
+  "version": "1.0.0",
+  "description": "Sports API based on football-data.org following r-argentina-programa's programming course.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "SET NODE_ENV=development&& nodemon server.js",
+    "go:prod": "SET NODE_ENV=production&& nodemon server.js"
+  },
+  "author": "RS-Cohen",
+  "license": "ISC",
+  "dependencies": {
+    "@icon/bootstrap-icons": "^1.0.0-alpha4.0",
+    "@popperjs/core": "^2.4.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "npm-check-updates": "^7.0.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0"
+  }
+}

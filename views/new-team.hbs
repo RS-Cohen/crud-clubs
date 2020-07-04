@@ -1,0 +1,83 @@
+
+{{> header}}
+
+<div class="container p-3">
+  <form action="/teams/new-team" method="POST" enctype="multipart/form-data" id="newTeamForm">
+    <div class="form-group">
+      <label for="crest-img">Upload crest image*</label> 
+      <input type="file" class="form-control-file" name="crest-img" id="crest-img" required><br>
+      {{#if msg}}
+      <div>{{msg}}</div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      <label for="name">Name*</label>
+      <input type="text" class="form-control input-field" name="name" id="name" required>
+      <div class="invalid-feedback">Please provide a valid name. Name must contain only letters.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="shortName">Short name*</label>
+      <input type="text" class="form-control input-field" name="shortName" id="shortName" required>
+      <div class="invalid-feedback">Please provide a valid short name. Short name must contain only letters.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="tla">TLA*</label>
+      <input type="text" class="form-control input-field" name="tla" id="tla" required>
+      <div class="invalid-feedback">Please provide a valid TLA. TLA must contain only capital letters.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address*</label>
+      <input type="text" class="form-control input-field" name="address" id="address" required>
+      <div class="invalid-feedback">Please provide a valid address. Symbols are not allowed except for commas.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone number*</label>
+      <input type="tel" class="form-control input-field" name="phone" id="phone" required>
+      <div class="invalid-feedback">Please provide a valid phone number. Phone number must contain only numbers.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="website">Website*</label>
+      <input type="url" class="form-control input-field" name="website" id="website" required>
+      <div class="invalid-feedback">Please provide a valid website url.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input type="email" class="form-control input-field" name="email" id="email" required>
+      <div class="invalid-feedback">Please provide a valid email.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="founded">Founded*</label>
+      <input type="number" class="form-control input-field" name="founded" id="founded" required>
+      <div class="invalid-feedback">Please provide a valid foundation year. Only numbers are allowed.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="clubColors">Club colors*</label>
+      <input type="text" class="form-control input-field" name="clubColors" id="clubColors" required>
+      <div class="invalid-feedback">Please provide valid club colors. Example: Red / White.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="venue">Venue*</label>
+      <input type="text" class="form-control input-field" name="venue" id="venue" required>
+      <div class="invalid-feedback">Please provide a valid venue.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="form-group">
+      <label for="clubCountry">Club country*</label>
+      <input type="text" class="form-control input-field" name="clubCountry" id="clubCountry" required>
+      <div class="invalid-feedback">Please provide a valid country.</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <button type="submit" class="btn btn-info text-uppercase add-team-btn">Add team</button>
+  </form>
+</div>
+
+{{> footer}}

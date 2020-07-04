@@ -1,0 +1,92 @@
+
+{{> header}}
+
+<div class="container p-3">
+    
+    <img class="team-crest--details" data-toggle="tooltip" data-placement="bottom" title="Crest image" src="{{teamData.crestUrl}}" alt="team-crest">
+    <h1 class="text-center team-heading">{{teamData.shortName}}</h1>
+    
+    <table class="table table-dark shadow table-borderless rounded team-chart">
+      <thead class="text-info">
+        <tr>
+          <th class="text-uppercase pl-4" scope="col">Information</th>
+          <th class="text-uppercase" scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pl-4">Name</td>
+          <td>{{teamData.name}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Short name</td>
+          <td>{{teamData.shortName}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">TLA</td>
+          <td>{{teamData.tla}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Address</td>
+          <td>{{teamData.address}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Phone</td>
+          <td>{{teamData.phone}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Website</td>
+          <td>
+            <a class="text-info" href="{{teamData.website}}">{{teamData.website}}</a> 
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-4">Email</td>
+          <td>{{teamData.email}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Founded</td>
+          <td>{{teamData.founded}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Club colors</td>
+          <td>{{teamData.clubColors}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Venue</td>
+          <td>{{teamData.venue}}</td>
+        </tr>
+        <tr>
+          <td class="pl-4">Last updated</td>
+          <td>{{teamData.lastUpdated}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="team-info-btns mt-4">
+      <button type="button" class="btn btn-info shadow" id="edit-team-btn">
+        <a class="text-white" href="/teams/settings/{{teamData.id}}">
+          Edit
+        </a>
+      </button>
+      
+      <button type="button" data-toggle="modal" data-target="#deleteModal" class="btn btn-info shadow" id="delete-team-btn" >
+        Delete
+      </button>
+    </div>
+  </div>
+  
+  {{> deleteModal }}
+
+  {{!------------- Google embed map ------------------}}
+  <div class="container container-address-map" id="map" style="width: 800px;">
+    <iframe
+      allowfullscreen
+      width="100%" height="450px"
+      frameborder="0" style="border:0"
+      async defer src="https://www.google.com/maps/embed/v1/place?key={{googleMapsKey}}&q={{teamData.address}},{{teamData.area.name}}">
+    </iframe>
+  </div>
+  
+
+{{> footer}}
