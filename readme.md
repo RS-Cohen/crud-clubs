@@ -7,7 +7,7 @@
 - Actions available are:
 
  * CREATE a team. Adding a logo plus some info about the team to add.
- * UPDATE the settings of a created team including logo.
+ * UPDATE settings of a created team including logo.
  * DELETE a team.
 
 # How to install the repository
