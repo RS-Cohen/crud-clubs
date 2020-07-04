@@ -13,7 +13,7 @@
 # How to install the repository
 
  * Downnload the repo and run "npm run install" to install node_modules and packages from the package.json.
- * Run the "start" script from the package.json
+ * Run the "start" script from package.json
 
 # Check out the live version 
 
