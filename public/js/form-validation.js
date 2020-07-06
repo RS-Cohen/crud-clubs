@@ -15,14 +15,14 @@ const clubCountryInput = document.querySelector('form #clubCountry');
 
 //Regular Expressions
 //Name - Shortname
-const namesRegex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,25}$/u
+const namesRegex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,45}$/u
 const tlaRegex = /^[A-Z]{3,4}$/
 const addressRegex = /^[A-za-z0-9\s&,]{20,55}$/
-const phoneRegex = /^[0-9()+\s]{15,30}$/
+const phoneRegex = /^[0-9()+\s]{10,30}$/
 const websiteRegex = /^(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-]*\.)+[a-z0-9][a-z0-9\-]*$/i
 const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 const foundedRegex = /^[0-9]{4}$/
-const clubColorsRegex = /^[A-za-z/\s]{10,28}$/
+const clubColorsRegex = /^[A-za-z/\s]{3,28}$/
 const venueRegex = /^[A-za-z'.\s]{5,45}$/
 const clubCountryRegex = /^[A-za-z\s]{4,25}$/
 
